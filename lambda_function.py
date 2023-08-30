@@ -7,6 +7,6 @@ def lambda_handler(event, context):
     result = num1 + num2
     sns = boto3.client('sns')
     message = f"The sum of {num1} and {num2} is {result}"
-    topic_arn = 'arn:aws:sns:us-east-2:756212760270:dem'
+    topic_arn = 'hide__my__token'
     response = sns.publish(TopicArn=topic_arn, Message=message)
     return response
